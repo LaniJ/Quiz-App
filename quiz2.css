@@ -1,0 +1,125 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+:root {
+    --hue-neutral: 200;
+    /* 193 */
+    --hue-wrong: 0;
+    --hue-correct: 145;
+
+}
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%)
+
+}
+
+#beginGame {
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.main-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+#image {
+    margin: 3px;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    display: none;
+
+}
+
+.answers-grid {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn,
+#startBtn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100px;
+    outline: none;
+}
+
+.btn:hover,
+#startBtn:hover {
+    border-color: black;
+}
+.btn.correct {
+    --hue: var(--hue-correct);
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+#startBtn {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: 150px;
+}
+
+h1 {
+    color: white;
+}
+
+.answers-grid{
+    gap: 20px;
+} 
+
+.gameControls {
+    display: flex;
+    justify-content: space-around;
+}
+
+h3 {
+    color: white;
+    font-size: 60px;
+}
